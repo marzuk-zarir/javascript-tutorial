@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>DOM - Document Object Model</title>
+    </head>
+    <body>
+        <div class="container my-5" id="con">
+            <h2 id="title" class="text-danger text-center">
+                DOM: Document Object Model
+            </h2>
+
+            <p class="lead my-4">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Placeat voluptatem quia totam sint facere aliquam, quos minus
+                maiores dignissimos omnis explicabo obcaecati nostrum debitis
+                officiis at, praesentium voluptates! Esse rem molestias nulla
+                minima mollitia eius omnis voluptate iusto, fugit, pariatur
+                provident harum? Repellendus cumque et est officiis a rerum
+                voluptatum?
+            </p>
+
+            <p class="lead">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Placeat voluptatem quia totam sint facere aliquam, quos minus
+                maiores dignissimos omnis explicabo obcaecati nostrum debitis
+                officiis at, praesentium voluptates! Esse rem molestias nulla
+                minima mollitia eius omnis voluptate iusto, fugit, pariatur
+                provident harum? Repellendus cumque et est officiis a rerum
+                voluptatum?
+            </p>
+
+            <ul class="list-group my-5" id="list">
+                <li class="list-group-item" name="list-item-one">List One</li>
+                <li class="list-group-item">List Two</li>
+                <li class="list-group-item">List Three</li>
+            </ul>
+
+            <div class="sample"></div>
+            <!-- Create DOM Elements -->
+            <h2 class="text-success">Create DOM Elements:</h2>
+            <ul class="list-group my-5" id="crtList">
+                <li class="list-group-item">One</li>
+                <li class="list-group-item">Two</li>
+                <li class="list-group-item">Three</li>
+            </ul>
+            <!-- Update & Remove DOM Elements -->
+            <h3 class="text-primary">Update & Remove DOM Elements:</h3>
+            <ul class="list-group my-5" id="list2">
+                <li class="list-group-item">One</li>
+                <li class="list-group-item">Two</li>
+                <li class="list-group-item">Three</li>
+                <li class="list-group-item">Four</li>
+            </ul>
+            <!-- Clone a Node Element -->
+            <h3 class="text-warning">Clone a Node Element:</h3>
+            <ul class="list-group my-5" id="list3">
+                <li class="list-group-item">One</li>
+                <li class="list-group-item">Two</li>
+                <li class="list-group-item">Three</li>
+            </ul>
+            <!-- Deal with Attributes -->
+            <h3 class="text-danger">Deal with Attributes:</h3>
+            <ul class="list-group my-5" id="list4">
+                <li class="list-group-item">One</li>
+                <li class="list-group-item">Two</li>
+                <li class="list-group-item">Three</li>
+            </ul>
+            <!-- Deal with Style -->
+            <h3 class="text-secondary">Deal with Style:</h3>
+            <ul class="list-group my-5" id="list5">
+                <li class="list-group-item">One</li>
+                <li class="list-group-item">Two</li>
+                <li class="list-group-item" id="three">Three</li>
+            </ul>
+            <!-- DOM Event -->
+            <h3 class="text-success">DOM Event:</h3>
+            <ul class="list-group my-3" id="list7">
+                <li class="list-group-item">One</li>
+                <li class="list-group-item">Two</li>
+                <li class="list-group-item">Three</li>
+            </ul>
+            <button id="add-me" class="btn btn-primary">Add me</button>
+            <div id="canvas" class="my-5">
+                (<span id="x-value">0</span>,<span id="y-value">0</span>)
+            </div>
+            <!-- Input Box Handling -->
+            <div class="form-group my-3">
+                <label for="name" class="font-weight-bold">
+                    What is your name?
+                </label>
+                <input
+                    type="text"
+                    id="name"
+                    class="form-control"
+                    placeholder="@Enter Name"
+                />
+            </div>
+            <p id="selected-name" class="mb-3 text-success"></p>
+            <!-- Check Box Handling -->
+            <h3 class="text-primary my-3">Check Box Handling:</h3>
+            <label class="font-weight-bold">Choose Your Skills:</label>
+            <div class="form-check">
+                <input
+                    type="checkbox"
+                    name="skills"
+                    id="skill1"
+                    class="form-check-input"
+                    value="C programming"
+                />
+                <label class="form-check-label">C programming</label>
+            </div>
+            <div class="form-check">
+                <input
+                    type="checkbox"
+                    name="skills"
+                    id="skill2"
+                    class="form-check-input"
+                    value="Java"
+                />
+                <label class="form-check-label">Java</label>
+            </div>
+            <div class="form-check">
+                <input
+                    type="checkbox"
+                    name="skills"
+                    id="skill3"
+                    class="form-check-input"
+                    value="C++"
+                />
+                <label class="form-check-label">C++</label>
+            </div>
+            <div class="form-check">
+                <input
+                    type="checkbox"
+                    name="skills"
+                    id="skill4"
+                    class="form-check-input"
+                    value="Python"
+                />
+                <label class="form-check-label">Python</label>
+            </div>
+            <h5 class="mt-3">
+                Selected Skill:
+                <span id="selected-skill"></span>
+            </h5>
+            <!-- List & Input Box Handling -->
+            <h3 class="text-danger mt-5">List & Input Box Handling:</h3>
+            <ul class="list-group mb-5" id="list8">
+                <li class="list-group-item">One</li>
+                <li class="list-group-item">Two</li>
+                <li class="list-group-item">Three</li>
+            </ul>
+            <!-- Form Handling -->
+            <h3 class="text-primary my-4">Form Handling:</h3>
+            <form id="form">
+                <div class="form-group">
+                    <label for="form-name" class="font-weight-bold"
+                        >What is your name?</label
+                    >
+                    <input
+                        type="text"
+                        id="form-name"
+                        name="form-name"
+                        class="form-control"
+                        placeholder="Enter Your Full Name"
+                    />
+                    <p class="invalid-feedback lead">
+                        You must have to provide a name
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label for="form-email" class="font-weight-bold"
+                        >What is your email?</label
+                    >
+                    <input
+                        type="email"
+                        id="form-email"
+                        name="form-email"
+                        class="form-control"
+                        placeholder="Enter Your Email Address"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="form-pwd" class="font-weight-bold"
+                        >What is your Password?</label
+                    >
+                    <input
+                        type="password"
+                        id="form-pwd"
+                        name="form-password"
+                        class="form-control"
+                        placeholder="Enter Your Password"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="form-select" class="font-weight-bold"
+                        >Select Your Country</label
+                    >
+                    <select
+                        name="form-select"
+                        id="form-select"
+                        class="form-control"
+                    >
+                        <option value="USA">USA</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="India">India</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Pakistan">Pakistan</option>
+                    </select>
+                </div>
+                <input type="submit" class="btn btn-primary" value="Submit" />
+            </form>
+        </div>
+    </body>
+</html>

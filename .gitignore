@@ -1,0 +1,6 @@
+node_modules
+*.log
+*.ini
+*.env
+*.npm
+*.cache

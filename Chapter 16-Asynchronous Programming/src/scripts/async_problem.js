@@ -1,4 +1,4 @@
-// ! in sayHi() we declare result and value assign in setTimeOut()...setTimeOut() is a async function so, js scape and execute next line and print undefined
+// ! in sayHi() we declare result and value assign in setTimeOut()...setTimeOut() is a async function so, js skip and execute next line and print undefined
 function sayHi(name) {
     let result
     setTimeout(() => {

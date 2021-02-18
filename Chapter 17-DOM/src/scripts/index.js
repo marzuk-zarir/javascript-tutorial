@@ -27,4 +27,9 @@ window.Popper = require('popper.js');
 // import './input_box_handling'
 // import './checkbox_handling'
 // import './list_and_input_box_handler'
-import './form_handling_&_validation'
+// import './form_handling_&_validation'
+// ! AJAX get & post request
+// import './AJAX_get_req'
+// import './AJAX_post_req'
+// ! More DOM Features
+// import './more_on_dom'

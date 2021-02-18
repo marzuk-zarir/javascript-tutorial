@@ -10,7 +10,7 @@
 // ? we can create a object and every data push in object as e.name is property & e.value is property's value... than we can submit this object in data base or remote server
 
 const form = document.getElementById('form')
-let isValid = false
+let isValid
 form.addEventListener('submit', function (e) {
     e.preventDefault()
     // console.log(this.length)  // 5 --> this.length return input element count
@@ -20,8 +20,7 @@ form.addEventListener('submit', function (e) {
     let formObject = {};
     [...this.elements].forEach(el => {
         if (el.type !== 'submit') {
-            isValid = validator(el)
-            // emailValidator(el)
+            isValid = validator(el) // validator func call
             if (isValid){
                 formObject[el.name] = el.value
             } else {
@@ -29,29 +28,37 @@ form.addEventListener('submit', function (e) {
             }
         }
     })
+    // if data is valid it will console.log and reset form.....but it is only a single data....we also use it for multiple data
     if (isValid) {
         console.log(formObject)
         this.reset() // it is reset the form
     }
 })
 
+/**
+ * @function validator a simple validator function
+ * @param {element} element for validate element
+ * @description validator func help to remove invalid name, pass, email, phone, address, postal cod....it also trim space before & after writing name, email etc....deprecated data will filter in this function....when a user input invalid data we can send a warning message through form validate
+ */
 function validator(element) {
     if (!element.value) {
         return false
     } else {
-        element.value.trim()
-        return true
-    }
-}
-
-function emailValidator(element) {
-    if (element.type === 'email') {
-        if (element.value.endsWith('@gmail.com')
-        || element.value.endsWith('@yahoo.com')
-        || element.value.endsWith('@mail.com')) {
+        if (element.type === 'text') {
+            element.value.trim()
             return true
-        } else {
-            return false
+        } else if (element.type === 'email') {
+            if (element.value.endsWith('@gmail.com')
+            || element.value.endsWith('@yahoo.com')
+            || element.value.endsWith('@mail.com')) {
+                return true
+            } else {
+                return false
+            }
+        } else if (element.type === 'password') {
+            return true
+        } else if (element.name === 'form-select') {
+            return true
         }
     }
 }
